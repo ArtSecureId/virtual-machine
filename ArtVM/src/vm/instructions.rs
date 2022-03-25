@@ -22,6 +22,7 @@ impl From<u8> for OpCode {
         match opcode {
            0 => OpCode::HLT,
            2 => OpCode::LOAD,
+
            _ => OpCode::IGL
         }
     }
@@ -48,6 +49,7 @@ mod InstructionTest {
     #[test]
     fn test_create_halt() {
         let opcode = OpCode::HLT;
+        assert_eq!(opcode, OpCode::HLT);
     }
 
     #[test]

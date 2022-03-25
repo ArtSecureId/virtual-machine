@@ -3,14 +3,14 @@ mod vm;
 mod repl;
 
 use log::info;
-use crate::vm::vm::AsVM;
+use crate::vm::vm::ArtVM;
 
 fn main() {
 
     dotenv::dotenv().ok();
     env_logger::init();
 
-    let vm = AsVM::new();
+    let vm = ArtVM::new();
 
-    info!("Initializing asVM environment.")
+    info!("Initializing ArtVM environment.")
 }
